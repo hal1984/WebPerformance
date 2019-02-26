@@ -1,9 +1,41 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      PI EN WEBWORKERS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      π ≅ {{ pi }}
+    </ion-item>
+    <ion-item>
+      Ellapsed Time = {{ ellapsedTime }}
+    </ion-item>
+    <ion-item>
+    </ion-item>
+    <ion-item>
+      Pulsaciones = {{ contador }}
+    </ion-item>
+    <ion-item>
+      <ion-label>Threads</ion-label>
+      <ion-select [(ngModel)]="model.threads" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="start()">
+      PI
+    </ion-fab-button>
+    <ion-fab-button (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
