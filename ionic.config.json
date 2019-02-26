@@ -1,5 +1,7 @@
 {
   "name": "WebPerformance",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
